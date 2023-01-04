@@ -1,0 +1,12 @@
+@import "./src/renderer/assets/styles/layouts";
+
+.layout {
+  width: 100%;
+  background: var(--background);
+
+  main {
+    width: 100%;
+    height: calc(100vh - 42px - 36px);
+    overflow-y: scroll;
+  }
+}

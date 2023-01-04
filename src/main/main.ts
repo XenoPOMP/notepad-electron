@@ -31,6 +31,21 @@ ipcMain.on('ipc-example', async (event, arg) => {
   event.reply('ipc-example', msgTemplate('pong'));
 });
 
+ipcMain.on('minimize-window', async (event, args) => {
+  mainWindow?.minimize();
+});
+
+ipcMain.on('close-window', async (event, args) => {
+  mainWindow?.close();
+});
+
+ipcMain.on('is-fullscreen', async (event, args) => {
+  event.reply(
+    'is-fullscreen',
+    mainWindow?.isSimpleFullScreen() || mainWindow?.isFullScreen(),
+  );
+});
+
 if (process.env.NODE_ENV === 'production') {
   const sourceMapSupport = require('source-map-support');
   sourceMapSupport.install();
@@ -51,7 +66,7 @@ const installExtensions = async () => {
   return installer
     .default(
       extensions.map((name) => installer[name]),
-      forceDownload
+      forceDownload,
     )
     .catch(console.log);
 };
@@ -71,14 +86,17 @@ const createWindow = async () => {
 
   mainWindow = new BrowserWindow({
     show: false,
-    width: 1024,
-    height: 728,
+    width: 500,
+    height: 700,
     icon: getAssetPath('icon.png'),
     webPreferences: {
       preload: app.isPackaged
         ? path.join(__dirname, 'preload.js')
         : path.join(__dirname, '../../.erb/dll/preload.js'),
     },
+    frame: false,
+    minHeight: 700,
+    minWidth: 500,
   });
 
   mainWindow.loadURL(resolveHtmlPath('index.html'));

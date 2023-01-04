@@ -1,0 +1,19 @@
+.themes {
+  --app-padding: 20px;
+
+  &.dark {
+    --background: #1F2124;
+
+
+    // Header theme
+    --header-font-color: white;
+    --header-icon-color: #7B7D80;
+
+
+    // Footer theme
+    --footer-background: #17181B;
+    --footer-icon-color: var(--header-icon-color);
+    --footer-on-icon-hover-background-color: #2C2D33;
+    --footer-on-icon-hover-icon-color: var(--footer-icon-color);
+  }
+}

@@ -1,0 +1,32 @@
+@import "./src/renderer/assets/styles/layouts";
+
+.appFooter {
+  height: 36px;
+  background: var(--footer-background);
+  padding: 0 var(--app-padding);
+  @extend %flexCenter;
+  justify-content: space-between;
+
+  .icon {
+    @extend %flexCenter;
+    height: 100%;
+    aspect-ratio: 1;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--footer-on-icon-hover-background-color);
+
+      svg {
+        path {
+          stroke: var(--footer-on-icon-hover-icon-color);
+        }
+      }
+    }
+
+    svg {
+      path {
+        stroke: var(--footer-icon-color);
+      }
+    }
+  }
+}

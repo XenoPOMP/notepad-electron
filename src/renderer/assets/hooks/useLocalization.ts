@@ -1,4 +1,4 @@
-import { Lang } from '../types/types';
+import { Lang } from '../utils/types';
 
 const useLocalization = () => {
   const lang: Lang = 'en';

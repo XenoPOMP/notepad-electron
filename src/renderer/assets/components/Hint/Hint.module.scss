@@ -1,0 +1,31 @@
+.hint {
+  --hintMargin: 4px;
+
+  position: absolute;
+  z-index: 10000;
+  background: var(--hint-background);
+  padding: 5px 10px;
+  font-size: 15px;
+  border-radius: 5px;
+
+  &.vAbove {
+    bottom: calc(100% + var(--hintMargin));
+  }
+
+  &.vCenter {
+    top: unset;
+    bottom: unset;
+  }
+
+  &.vUnder {
+    top: calc(100% + var(--hintMargin));
+  }
+
+  &.hLeft {
+    left: 0;
+  }
+
+  &.hRight {
+    right: 0;
+  }
+}

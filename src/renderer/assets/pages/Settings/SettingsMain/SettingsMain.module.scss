@@ -8,6 +8,7 @@
     $transition: .15s ease;
     border-bottom: 1px solid var(--sets-section-border);
     padding: .75em 0;
+    user-select: none;
 
     &:last-of-type {
       border-bottom: none;

@@ -8,5 +8,12 @@
     width: 100%;
     height: calc(100vh - 42px - 36px);
     overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      $thumbThickness: 4px;
+
+      width: $thumbThickness;
+      height: $thumbThickness;
+    }
   }
 }

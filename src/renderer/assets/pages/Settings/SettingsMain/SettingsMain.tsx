@@ -1,10 +1,16 @@
 import cn from 'classnames';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import Layout from '../../../components/Layout/Layout';
 import styles from './SettingsMain.module.scss';
 import useLocalization from '../../../hooks/useLocalization';
 
 const SettingsMain = () => {
   const localization = useLocalization();
+
+  const dispatch = useDispatch();
+  const themeLink = '/settings/theme';
+  const navigate = useNavigate();
 
   return (
     <Layout frame={{ title: localization.pages.mainSettings.title }}>
@@ -21,7 +27,18 @@ const SettingsMain = () => {
         </section>
 
         <section key='theme-section'>
-          <h2 className={cn(styles.hasLink)}>
+          <h2
+            className={cn(styles.hasLink)}
+            onClick={() => {
+              dispatch({
+                type: 'CHANGE_PAGE',
+                payload: {
+                  nextPage: themeLink,
+                },
+              });
+              navigate(themeLink, { replace: true });
+            }}
+          >
             {localization.pages.mainSettings.sections.theme.title}{' '}
             <svg
               width='8'

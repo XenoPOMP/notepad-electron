@@ -22,6 +22,9 @@ const useLocalization = () => {
             },
           },
         },
+        themeSettings: {
+          title: 'Settings • Theme',
+        },
       },
     },
     ru: {},

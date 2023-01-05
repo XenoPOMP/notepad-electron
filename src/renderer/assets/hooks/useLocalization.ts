@@ -1,6 +1,7 @@
+import { Lang } from '../types/types';
+
 const useLocalization = () => {
-  type LangType = 'en' | 'ru';
-  const lang: LangType = 'en';
+  const lang: Lang = 'en';
 
   const locales = {
     en: {
@@ -8,8 +9,18 @@ const useLocalization = () => {
         main: {
           title: 'Main',
         },
-        settings: {
+        mainSettings: {
           title: 'Settings',
+          sections: {
+            language: {
+              title: 'Language',
+              rusLocale: 'Russian',
+              enLocale: 'English',
+            },
+            theme: {
+              title: 'Theme',
+            },
+          },
         },
       },
     },

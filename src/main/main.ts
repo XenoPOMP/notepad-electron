@@ -9,7 +9,7 @@
  * `./src/main.js` using webpack. This gives us some performance wins.
  */
 import path from 'path';
-import { app, BrowserWindow, shell, ipcMain } from 'electron';
+import { app, BrowserWindow, shell, ipcMain, ipcRenderer } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
@@ -39,12 +39,7 @@ ipcMain.on('close-window', async (event, args) => {
   mainWindow?.close();
 });
 
-ipcMain.on('is-fullscreen', async (event, args) => {
-  event.reply(
-    'is-fullscreen',
-    mainWindow?.isSimpleFullScreen() || mainWindow?.isFullScreen(),
-  );
-});
+ipcMain.handle('keh-go-back', async (event, args) => {});
 
 if (process.env.NODE_ENV === 'production') {
   const sourceMapSupport = require('source-map-support');

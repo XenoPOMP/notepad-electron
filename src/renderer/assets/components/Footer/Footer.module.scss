@@ -3,7 +3,8 @@
 .appFooter {
   height: 36px;
   background: var(--footer-background);
-  padding: 0 var(--app-padding);
+  // padding: 0 var(--app-padding);
+  padding-right: var(--app-padding);
   @extend %flexCenter;
   justify-content: space-between;
 

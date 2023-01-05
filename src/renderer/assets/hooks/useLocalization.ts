@@ -8,6 +8,11 @@ const useLocalization = () => {
       pages: {
         main: {
           title: 'Main',
+          note: {
+            hints: {
+              delete: 'Delete',
+            },
+          },
         },
         mainSettings: {
           title: 'Settings',

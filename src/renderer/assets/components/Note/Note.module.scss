@@ -4,6 +4,7 @@
   padding: 0 var(--app-padding);
   font-size: 17px;
   cursor: default;
+  margin-bottom: var(--app-padding);
 
   .content {
     background: var(--note-background);
@@ -24,11 +25,38 @@
     }
 
     .controls {
-      height: 100%;
+      min-height: 68px;
       width: 20%;
-      border: 2px solid red;
       user-select: none;
       @extend %flexCenter;
+
+      svg {
+        &:hover {
+          &.trash {
+            path.withFill {
+              fill: var(--note-icon-hover-color);
+            }
+
+            path.withStroke {
+              stroke: var(--note-icon-hover-color);
+            }
+          }
+        }
+
+        &.trash {
+          $transition: .15s ease;
+
+          path.withFill {
+            transition: $transition;
+            fill: var(--note-icon-color);
+          }
+
+          path.withStroke {
+            transition: $transition;
+            stroke: var(--note-icon-color);
+          }
+        }
+      }
     }
   }
 }

@@ -1,20 +1,40 @@
-.hint {
-  --hintMargin: 4px;
+@import "./src/renderer/assets/styles/layouts";
 
+.hint {
+  --hintMargin: 6px;
+
+  pointer-events: none;
   position: absolute;
   z-index: 10000;
-  background: var(--hint-background);
-  padding: 5px 10px;
-  font-size: 15px;
-  border-radius: 5px;
+  width: 100%;
+  @extend %flexCenter;
+
+  .content {
+    padding: 5px 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    background: var(--hint-background);
+    position: relative;
+
+    .iconPlaceholder {
+      position: absolute;
+      content: "";
+      @extend %flexCenter;
+
+      .icon {
+        aspect-ratio: 2 / 1;
+        background: var(--hint-background);
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      }
+    }
+  }
 
   &.vAbove {
     bottom: calc(100% + var(--hintMargin));
   }
 
   &.vCenter {
-    top: unset;
-    bottom: unset;
+    height: 100%;
   }
 
   &.vUnder {
@@ -22,10 +42,73 @@
   }
 
   &.hLeft {
-    left: 0;
+    justify-content: end;
+    transform: translateX(calc(-100% - var(--hintMargin)));
+  }
+
+  &.hCenter {
+    // transform: translateX(-25%);
   }
 
   &.hRight {
-    right: 0;
+    justify-content: start;
+    transform: translateX(calc(100% + var(--hintMargin)));
+  }
+
+
+  // Triangle icon
+  &.hCenter.vUnder {
+    .iconPlaceholder {
+      bottom: 100%;
+      width: 100%;
+      left: 0;
+
+      .icon {
+        height: var(--hintMargin);
+      }
+    }
+  }
+
+  &.hCenter.vAbove {
+    .iconPlaceholder {
+      top: 100%;
+      width: 100%;
+      left: 0;
+
+      .icon {
+        height: var(--hintMargin);
+        clip-path: polygon(100% 0, 0 0, 50% 100%);
+      }
+    }
+  }
+
+  &.hLeft.vCenter {
+    .iconPlaceholder {
+      left: 100%;
+      height: 100%;
+      width: var(--hintMargin);
+      top: 0;
+
+      .icon {
+        width: var(--hintMargin);
+        aspect-ratio: 1 / 2;
+        clip-path: polygon(100% 50%, 0 0, 0 100%);
+      }
+    }
+  }
+
+  &.hRight.vCenter {
+    .iconPlaceholder {
+      right: 100%;
+      height: 100%;
+      width: var(--hintMargin);
+      top: 0;
+
+      .icon {
+        width: var(--hintMargin);
+        aspect-ratio: 1 / 2;
+        clip-path: polygon(100% 100%, 100% 0, 0 50%);
+      }
+    }
   }
 }

@@ -1,27 +1,25 @@
+import { FC, useState } from 'react';
+import cn from 'classnames';
 import Hint from '../../Hint/Hint';
-import { useState } from 'react';
+import useLocalization from '../../../hooks/useLocalization';
+import { IconProps } from './Icon.props';
+import styles from './Icon.module.scss';
 
-const Icon = () => {
+const Icon: FC<IconProps> = ({ hintText, img }) => {
   const [isHover, setIsHover] = useState(false);
+  const localization = useLocalization();
 
   return (
     <div
-      style={{
-        position: 'relative',
-        width: 20,
-        aspectRatio: '1',
-        background: 'green',
-      }}
+      className={cn(styles.icon)}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
+      {img}
       <Hint
-        text={'Delete'}
+        text={hintText}
         anchors={{ horizontal: 'center', vertical: 'under' }}
         trigger={isHover}
-        horizontalCenterMargin={{
-          left: '-100%',
-        }}
       />
     </div>
   );

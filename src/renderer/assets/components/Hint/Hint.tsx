@@ -1,17 +1,16 @@
 import { CSSProperties, FC, useEffect } from 'react';
 import cn from 'classnames';
+import { motion } from 'framer-motion';
 import { HintProps } from './Hint.props';
 import styles from './Hint.module.scss';
-import { motion } from 'framer-motion';
 
 const Hint: FC<HintProps> = ({
   text,
   anchors,
   trigger,
-  horizontalCenterMargin,
 }) => {
   const getAnchoredClasses = (): string => {
-    let classes: string = '';
+    let classes = '';
 
     switch (anchors.vertical) {
       case 'above': {
@@ -28,6 +27,10 @@ const Hint: FC<HintProps> = ({
         classes = cn(classes, styles.vUnder);
         break;
       }
+
+      default: {
+        classes = cn(classes);
+      }
     }
 
     switch (anchors.horizontal) {
@@ -36,9 +39,18 @@ const Hint: FC<HintProps> = ({
         break;
       }
 
+      case 'center': {
+        classes = cn(classes, styles.hCenter);
+        break;
+      }
+
       case 'right': {
         classes = cn(classes, styles.hRight);
         break;
+      }
+
+      default: {
+        classes = cn(classes);
       }
     }
 
@@ -47,9 +59,6 @@ const Hint: FC<HintProps> = ({
 
   const getSX = () : CSSProperties => {
     const sx = {} as CSSProperties;
-
-    sx.left = horizontalCenterMargin?.left;
-    sx.right = horizontalCenterMargin?.right;
 
     return sx;
   };
@@ -62,11 +71,17 @@ const Hint: FC<HintProps> = ({
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: trigger ? 1 : 0 }}
-      transition={{ duration: 0.3, ease: 'easeOut', delay: 0.5 }}
+      transition={{ duration: 0.15 }}
       style={getSX()}
       className={cn(styles.hint, cn(getAnchoredClasses()))}
     >
-      {text}
+      <div className={cn(styles.content)}>
+        {text}
+
+        <div className={cn(styles.iconPlaceholder)}>
+          <div className={cn(styles.icon)}></div>
+        </div>
+      </div>
     </motion.div>
   );
 };

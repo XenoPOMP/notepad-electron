@@ -4,9 +4,5 @@ export interface HintProps {
     horizontal: 'left' | 'center' | 'right',
     vertical: 'above' | 'center' | 'under',
   };
-  horizontalCenterMargin?: {
-    left?: string;
-    right?: string;
-  }
   trigger: boolean;
 }

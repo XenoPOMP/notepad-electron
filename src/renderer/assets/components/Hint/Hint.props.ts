@@ -5,4 +5,5 @@ export interface HintProps {
     vertical: 'above' | 'center' | 'under',
   };
   trigger: boolean;
+  variant: 'dark' | 'light';
 }

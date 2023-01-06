@@ -24,7 +24,8 @@
       "@redux/*": ["renderer/assets/redux/*"],
       "@styles/*": ["renderer/assets/styles/*"],
       "@utils/*": ["renderer/assets/utils/*"],
-      "@locales/*": ["renderer/assets/locales/*"]
+      "@locales/*": ["renderer/assets/locales/*"],
+      "@info/*": ["renderer/assets/info/*"]
     }
   },
   "exclude": ["test", "release/build", "release/app/dist", ".erb/dll"]

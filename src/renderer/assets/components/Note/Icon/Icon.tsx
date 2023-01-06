@@ -24,6 +24,7 @@ const Icon: FC<IconProps> = ({ hintText, img, onClick }) => {
         text={hintText}
         anchors={{ horizontal: 'center', vertical: 'under' }}
         trigger={isHover}
+        variant={'dark'}
       />
     </div>
   );

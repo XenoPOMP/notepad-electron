@@ -1,0 +1,18 @@
+@import "@styles/layouts.scss";
+
+.button {
+  color: var(--footer-icon-color);
+  font-weight: bold;
+  font-size: 1em;
+  padding: 0 var(--app-padding);
+  height: 100%;
+  @extend %flexCenter;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    background: var(--footer-on-icon-hover-background-color);
+    color: var(--footer-on-icon-hover-icon-color);
+  }
+}

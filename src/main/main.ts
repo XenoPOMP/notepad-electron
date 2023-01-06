@@ -90,7 +90,7 @@ const createWindow = async () => {
         : path.join(__dirname, '../../.erb/dll/preload.js'),
     },
     frame: false,
-    minHeight: 700,
+    minHeight: 650,
     minWidth: 500,
   });
 

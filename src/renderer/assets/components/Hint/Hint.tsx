@@ -1,4 +1,4 @@
-import { CSSProperties, FC, useEffect } from 'react';
+import { CSSProperties, FC } from 'react';
 import cn from 'classnames';
 import { motion } from 'framer-motion';
 
@@ -9,6 +9,7 @@ const Hint: FC<HintProps> = ({
   text,
   anchors,
   trigger,
+  variant
 }) => {
   const getAnchoredClasses = (): string => {
     let classes = '';
@@ -58,6 +59,22 @@ const Hint: FC<HintProps> = ({
     return classes;
   };
 
+  const getVariantClass = (): string => {
+    switch (variant) {
+      case 'dark': {
+        return styles.dark;
+      }
+
+      case 'light': {
+        return styles.light;
+      }
+
+      default: {
+        return styles.dark;
+      }
+    }
+  };
+
   const getSX = () : CSSProperties => {
     const sx = {} as CSSProperties;
 
@@ -70,7 +87,7 @@ const Hint: FC<HintProps> = ({
       animate={{ opacity: trigger ? 1 : 0 }}
       transition={{ duration: 0.15 }}
       style={getSX()}
-      className={cn(styles.hint, cn(getAnchoredClasses()))}
+      className={cn(styles.hint, cn(getAnchoredClasses(), getVariantClass()))}
     >
       <div className={cn(styles.content)}>
         {text}

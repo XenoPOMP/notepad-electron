@@ -7,6 +7,13 @@ const en = {
           delete: 'Delete',
         },
       },
+      footer: {
+        versionLayout: 'ver. ',
+        hints: {
+          settingsButton: 'Settings',
+          versionButton: 'Patch notes',
+        },
+      },
     },
     mainSettings: {
       title: 'Settings',
@@ -23,6 +30,16 @@ const en = {
     },
     themeSettings: {
       title: 'Settings • Theme',
+    },
+    patchNotes: {
+      title: 'Patch notes',
+      patch: {
+        versionLabel: 'Version',
+        patchZeroDotOne: {
+          paragraphOne: 'Added new pages:',
+          dottedListOne: ['Main page', 'Settings page', 'Patch notes page'],
+        },
+      },
     },
   },
 };

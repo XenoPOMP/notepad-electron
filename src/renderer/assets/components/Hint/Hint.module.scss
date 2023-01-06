@@ -10,12 +10,36 @@
   @extend %flexCenter;
   user-select: none;
 
+  &.dark {
+    .content {
+      background: var(--hint-background-dark);
+      color: var(--hint-font-color-dark);
+
+      .iconPlaceholder .icon {
+        background: var(--hint-background-dark);
+      }
+    }
+  }
+
+  &.light {
+    font-weight: 700;
+
+    .content {
+      background: var(--hint-background-light);
+      color: var(--hint-font-color-light);
+
+      .iconPlaceholder .icon {
+        background: var(--hint-background-light);
+      }
+    }
+  }
+
   .content {
     padding: 5px 10px;
     font-size: 15px;
     border-radius: 5px;
-    background: var(--hint-background);
     position: relative;
+    text-align: center;
 
     .iconPlaceholder {
       position: absolute;
@@ -24,7 +48,7 @@
 
       .icon {
         aspect-ratio: 2 / 1;
-        background: var(--hint-background);
+        background: var(--hint-background-dark);
         clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
         transform: translateY(1px);
       }

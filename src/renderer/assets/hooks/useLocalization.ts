@@ -1,38 +1,13 @@
 import { Lang } from '@utils/types';
+import en from '@locales/en';
+import ru from '@locales/ru';
 
 const useLocalization = () => {
   const lang: Lang = 'en';
 
   const locales = {
-    en: {
-      pages: {
-        main: {
-          title: 'Main',
-          note: {
-            hints: {
-              delete: 'Delete',
-            },
-          },
-        },
-        mainSettings: {
-          title: 'Settings',
-          sections: {
-            language: {
-              title: 'Language',
-              rusLocale: 'Russian',
-              enLocale: 'English',
-            },
-            theme: {
-              title: 'Theme',
-            },
-          },
-        },
-        themeSettings: {
-          title: 'Settings • Theme',
-        },
-      },
-    },
-    ru: {},
+    en,
+    ru,
   };
 
   return locales[lang];

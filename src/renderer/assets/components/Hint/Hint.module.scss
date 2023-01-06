@@ -8,6 +8,7 @@
   z-index: 10000;
   width: 100%;
   @extend %flexCenter;
+  user-select: none;
 
   .content {
     padding: 5px 10px;

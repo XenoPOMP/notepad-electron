@@ -23,7 +23,8 @@
       "@pages/*": ["renderer/assets/pages/*"],
       "@redux/*": ["renderer/assets/redux/*"],
       "@styles/*": ["renderer/assets/styles/*"],
-      "@utils/*": ["renderer/assets/utils/*"]
+      "@utils/*": ["renderer/assets/utils/*"],
+      "@locales/*": ["renderer/assets/locales/*"]
     }
   },
   "exclude": ["test", "release/build", "release/app/dist", ".erb/dll"]

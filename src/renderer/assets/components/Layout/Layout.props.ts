@@ -1,4 +1,4 @@
-import { ChildrenInterface } from '../../interfaces/Children.interface';
+import { ChildrenInterface } from '@interfaces/Children.interface';
 
 export interface LayoutProps extends ChildrenInterface {
   frame: {

@@ -1,9 +1,11 @@
 import cn from 'classnames';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import Layout from '../../../components/Layout/Layout';
+
+import Layout from '@components/Layout/Layout';
+import useLocalization from '@hooks/useLocalization';
+
 import styles from './SettingsMain.module.scss';
-import useLocalization from '../../../hooks/useLocalization';
 
 const SettingsMain = () => {
   const localization = useLocalization();

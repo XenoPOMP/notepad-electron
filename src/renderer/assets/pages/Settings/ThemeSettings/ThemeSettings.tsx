@@ -1,5 +1,5 @@
-import useLocalization from '../../../hooks/useLocalization';
-import Layout from '../../../components/Layout/Layout';
+import Layout from '@components/Layout/Layout';
+import useLocalization from '@hooks/useLocalization';
 
 const ThemeSettings = () => {
   const localization = useLocalization();

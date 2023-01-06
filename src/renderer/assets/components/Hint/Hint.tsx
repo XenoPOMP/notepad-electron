@@ -1,6 +1,7 @@
 import { CSSProperties, FC, useEffect } from 'react';
 import cn from 'classnames';
 import { motion } from 'framer-motion';
+
 import { HintProps } from './Hint.props';
 import styles from './Hint.module.scss';
 

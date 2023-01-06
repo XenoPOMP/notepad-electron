@@ -1,10 +1,12 @@
 import cn from 'classnames';
 import { FC } from 'react';
 import TextOverflow from 'react-text-overflow';
+
+import Icon from '@components/Note/Icon/Icon';
+import useLocalization from '@hooks/useLocalization';
+
 import styles from './Note.module.scss';
 import { NoteProps } from './Note.props';
-import Icon from './Icon/Icon';
-import useLocalization from '../../hooks/useLocalization';
 
 const Note: FC<NoteProps> = ({ data }) => {
   const localization = useLocalization();

@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+
 import styles from './Footer.module.scss';
 
 const Footer = () => {

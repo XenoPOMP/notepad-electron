@@ -1,10 +1,12 @@
 import cn from 'classnames';
 import { FC } from 'react';
-import GlobalProvider from '../providers/GlobalProvider/GlobalProvider';
+
+import Header from '@components/Header/Header';
+import GlobalProvider from '@components/providers/GlobalProvider/GlobalProvider';
+import Footer from '@components/Footer/Footer';
+
 import styles from './Layout.module.scss';
-import Header from '../Header/Header';
 import { LayoutProps } from './Layout.props';
-import Footer from '../Footer/Footer';
 
 const Layout: FC<LayoutProps> = ({ children, frame }) => {
   return (

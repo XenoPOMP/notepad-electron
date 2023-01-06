@@ -1,6 +1,6 @@
-import Layout from '../../components/Layout/Layout';
-import useLocalization from '../../hooks/useLocalization';
-import Note from '../../components/Note/Note';
+import Layout from '@components/Layout/Layout';
+import useLocalization from '@hooks/useLocalization';
+import Note from '@components/Note/Note';
 
 const MainPage = () => {
   const localization = useLocalization();

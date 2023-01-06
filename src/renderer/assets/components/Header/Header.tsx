@@ -1,7 +1,8 @@
 import cn from 'classnames';
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+
 import styles from './Header.module.scss';
 import { HeaderProps } from './Header.props';
 

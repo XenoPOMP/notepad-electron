@@ -13,7 +13,18 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "allowJs": true,
-    "outDir": ".erb/dll"
+    "outDir": ".erb/dll",
+    "paths": {
+      "@components/*": ["renderer/assets/components/*"],
+      "@fonts/*": ["renderer/assets/fonts/*"],
+      "@hooks/*": ["renderer/assets/hooks/*"],
+      "@images/*": ["renderer/assets/images/*"],
+      "@interfaces/*": ["renderer/assets/interfaces/*"],
+      "@pages/*": ["renderer/assets/pages/*"],
+      "@redux/*": ["renderer/assets/redux/*"],
+      "@styles/*": ["renderer/assets/styles/*"],
+      "@utils/*": ["renderer/assets/utils/*"]
+    }
   },
   "exclude": ["test", "release/build", "release/app/dist", ".erb/dll"]
 }

@@ -25,6 +25,7 @@
         aspect-ratio: 2 / 1;
         background: var(--hint-background);
         clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        transform: translateY(1px);
       }
     }
   }
@@ -34,7 +35,7 @@
   }
 
   &.vCenter {
-    height: 100%;
+    // height: 100%;
   }
 
   &.vUnder {
@@ -78,6 +79,7 @@
       .icon {
         height: var(--hintMargin);
         clip-path: polygon(100% 0, 0 0, 50% 100%);
+        transform: translateY(0);
       }
     }
   }
@@ -93,6 +95,7 @@
         width: var(--hintMargin);
         aspect-ratio: 1 / 2;
         clip-path: polygon(100% 50%, 0 0, 0 100%);
+        transform: translateY(0);
       }
     }
   }
@@ -108,6 +111,7 @@
         width: var(--hintMargin);
         aspect-ratio: 1 / 2;
         clip-path: polygon(100% 100%, 100% 0, 0 50%);
+        transform: translateY(0);
       }
     }
   }

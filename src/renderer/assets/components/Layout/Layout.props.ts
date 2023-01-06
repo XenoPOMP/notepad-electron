@@ -1,6 +1,6 @@
-import { ChildrenInterface } from '@interfaces/Children.interface';
+import { SimpleReactComponent } from '@interfaces/SimpleReactComponent';
 
-export interface LayoutProps extends ChildrenInterface {
+export interface LayoutProps extends SimpleReactComponent {
   frame: {
     title: string,
   };

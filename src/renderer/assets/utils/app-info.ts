@@ -1,5 +1,5 @@
 const appInfo = {
-  version: 'beta 0.1',
+  version: '0.2',
 };
 
 export default appInfo;

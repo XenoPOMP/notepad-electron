@@ -11,7 +11,7 @@
     padding: var(--app-padding);
     min-height: 68px;
     font-size: 1em;
-    border-radius: 1em;
+    border-radius: var(--block-border-radius);
     color: var(--note-font-color);
     display: flex;
 

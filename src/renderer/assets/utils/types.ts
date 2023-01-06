@@ -1,3 +1,9 @@
-type Lang = 'en' | 'ru';
+import { ReactNode } from 'react';
 
-export { Lang };
+type Lang = 'en' | 'ru';
+type PatchType = {
+  versionId: string,
+  textBlocks: ReactNode[],
+};
+
+export { Lang, PatchType };

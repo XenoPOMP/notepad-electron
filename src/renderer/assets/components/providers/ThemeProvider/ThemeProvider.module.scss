@@ -1,5 +1,6 @@
 .themes {
   --app-padding: 20px;
+  --block-border-radius: 17px;
 
   &.dark {
     --background: #1F2124;
@@ -28,6 +29,12 @@
     --sets-font-color: white;
     --sets-font-non-active-color: gray;
     --sets-section-border: var(--header-icon-color);
+
+
+    // Patch notes page
+    --patch-show-more-color: var(--header-icon-color);
+    --patch-show-more-on-hover-color: #959696;
+    --patch-show-more-on-click-color: white;
 
 
     // Footer theme

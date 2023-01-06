@@ -7,7 +7,7 @@
   margin-bottom: var(--app-padding);
 
   .content {
-    border-radius: 1em;
+    border-radius: var(--block-border-radius);
     background: var(--note-background);
     color: var(--note-font-color);
     padding: var(--app-padding);
@@ -21,11 +21,15 @@
       line-height: 1.25em;
     }
 
-    p {
+    p + p {
       font-size: 1em;
+      text-indent: 1.25em;
+      margin-top: .25em;
     }
 
     ul {
+      margin-top: .25em;
+
       li {
         margin-left: 2em;
       }

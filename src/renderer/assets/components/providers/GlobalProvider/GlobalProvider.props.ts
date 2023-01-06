@@ -1,3 +1,3 @@
-import { ChildrenInterface } from '../../../interfaces/Children.interface';
+import { SimpleReactComponent } from '@interfaces/SimpleReactComponent';
 
-export interface GlobalProviderProps extends ChildrenInterface {}
+export interface GlobalProviderProps extends SimpleReactComponent {}

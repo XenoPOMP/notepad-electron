@@ -1,0 +1,20 @@
+.page {
+  .showMore {
+    font-size: 17px;
+    padding: 0 var(--app-padding);
+    color: var(--patch-show-more-color);
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    transition: .08s ease;
+    margin-bottom: var(--app-padding);
+
+    &:hover {
+      color: var(--patch-show-more-on-hover-color);
+    }
+
+    &:active {
+      color: var(--patch-show-more-on-click-color);
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import useLocalization from '@hooks/useLocalization';
-import appInfo from '@info/app-info';
+import appInfo from '@utils/app-info';
 import Hint from '@components/Hint/Hint';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';

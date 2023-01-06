@@ -8,10 +8,10 @@ import Footer from '@components/Footer/Footer';
 import styles from './Layout.module.scss';
 import { LayoutProps } from './Layout.props';
 
-const Layout: FC<LayoutProps> = ({ children, frame }) => {
+const Layout: FC<LayoutProps> = ({ children, frame, className }) => {
   return (
     <GlobalProvider>
-      <div className={cn(styles.layout)}>
+      <div className={cn(styles.layout, className)}>
         <Header frame={frame} />
 
         <main>{children}</main>

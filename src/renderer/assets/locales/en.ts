@@ -39,7 +39,13 @@ const en = {
           paragraphOne: 'Added new pages:',
           dottedListOne: ['Main page', 'Settings page', 'Patch notes page'],
         },
+        patchZeroDotTwo: {
+          paragraphOne: 'Updated patch notes page.',
+          paragraphTwo:
+            'Now the first six patch notes will be displayed on this page, to view older notes, you can click on a special button.',
+        },
       },
+      showMoreButton: 'Show all patch notes',
     },
   },
 };

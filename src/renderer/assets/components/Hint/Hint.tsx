@@ -64,10 +64,6 @@ const Hint: FC<HintProps> = ({
     return sx;
   };
 
-  useEffect(() => {
-    console.log('Change triggered');
-  }, [trigger]);
-
   return (
     <motion.div
       initial={{ opacity: 0 }}

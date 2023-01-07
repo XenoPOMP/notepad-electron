@@ -29,6 +29,27 @@ const Note: FC<NoteProps> = ({ data }) => {
                 viewBox='0 0 25 25'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'
+              >
+                <path
+                  className={cn(styles.withStroke)}
+                  d='M17.7798 6.11572L4.24805 19.6777L3.125 21.875L5.32178 20.7519L18.8843 7.22021L17.7798 6.11572ZM20.5415 3.354L19.437 4.45849L20.5415 5.56347L21.646 4.45849C21.7924 4.31199 21.8746 4.11336 21.8746 3.90625C21.8746 3.69913 21.7924 3.5005 21.646 3.354V3.354C21.4995 3.2076 21.3009 3.12536 21.0938 3.12536C20.8866 3.12536 20.688 3.2076 20.5415 3.354V3.354Z'
+                  strokeWidth='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                />
+              </svg>
+            }
+            hintText={localization.pages.main.note.hints.edit}
+          />
+
+          <Icon
+            img={
+              <svg
+                width='25'
+                height='25'
+                viewBox='0 0 25 25'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'
                 className={cn(styles.trash)}
               >
                 <path

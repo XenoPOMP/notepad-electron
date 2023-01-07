@@ -29,32 +29,39 @@
       width: 20%;
       user-select: none;
       @extend %flexCenter;
+      flex-direction: column;
 
       svg {
+        margin: .25em 0;
+
+        //&:first-of-type {
+        //  margin-top: 0;
+        //}
+        //
+        //&:last-of-type {
+        //  margin-bottom: 0;
+        //}
+
         &:hover {
-          &.trash {
-            path.withFill {
-              fill: var(--note-icon-hover-color);
-            }
-
-            path.withStroke {
-              stroke: var(--note-icon-hover-color);
-            }
-          }
-        }
-
-        &.trash {
-          $transition: .15s ease;
-
           path.withFill {
-            transition: $transition;
-            fill: var(--note-icon-color);
+            fill: var(--note-icon-hover-color);
           }
 
           path.withStroke {
-            transition: $transition;
-            stroke: var(--note-icon-color);
+            stroke: var(--note-icon-hover-color);
           }
+        }
+
+        $transition: .15s ease;
+
+        path.withFill {
+          transition: $transition;
+          fill: var(--note-icon-color);
+        }
+
+        path.withStroke {
+          transition: $transition;
+          stroke: var(--note-icon-color);
         }
       }
     }

@@ -5,6 +5,7 @@ const en = {
       note: {
         hints: {
           delete: 'Delete',
+          edit: 'Edit',
         },
       },
       footer: {
